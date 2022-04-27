@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt 
 import pandas as pd 
 import seaborn as sns
+from math import sqrt
 
 
 def mediapond(datos):
@@ -21,4 +22,10 @@ def varianza(datos):
 
     return cont/sum(datos["Cantidad de volantes (Ni)"])
 
-    
+
+def porcentaje(datos):
+
+    print("el 68% de los datos estan entre:"+ mediapond(datos)-sqrt(varianza(datos))+ "y"+ mediapond(datos)+sqrt(varianza(datos)))
+    print("el 95% de los datos estan entre:"+ mediapond(datos)-2*sqrt(varianza(datos))+ "y"+ mediapond(datos)+2*sqrt(varianza(datos)))
+    print("el 99.7% de los datos estan entre:"+ mediapond(datos)-3*sqrt(varianza(datos))+ "y"+ mediapond(datos)+3*sqrt(varianza(datos)))
+
