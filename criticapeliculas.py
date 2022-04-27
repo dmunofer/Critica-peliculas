@@ -13,3 +13,12 @@ def mediapond(datos):
         num+=i
 
     return suma/num
+
+def varianza(datos):
+    cont=0
+    for i in datos["Ni*((xi-media)^2)"]:
+        cont+=i
+
+    return cont/sum(datos["Cantidad de volantes (Ni)"])
+
+    
