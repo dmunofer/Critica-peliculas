@@ -3,6 +3,8 @@ import pandas as pd
 import seaborn as sns
 from math import sqrt
 
+datos = pd.DataFrame({"Opinion xi": [5,4,3,2,1,0], "Cantidad de volantes (Ni)": [40,99,145,133,96,40],"Productos(Ni*xi)": [200,396,435,266,96,0], "Ni*((xi-media)^2)":[246.21,217.14,33.54,35.82,221.50,253.81]})
+
 
 def mediapond(datos):
     suma=0
@@ -33,3 +35,11 @@ def porcentaje(datos):
 def plot(datos):
     plt.figure(figsize=((15,15)))
     sns.lineplot(data=datos, x = "Opinion xi", y="Cantidad de volantes (Ni)", color = "Blue")
+
+
+def critica():
+    mediapond(datos)
+    varianza(datos)
+    sqrt(varianza(datos))
+    porcentaje(mediapond(datos), sqrt(varianza(datos)))
+    plot(datos)
