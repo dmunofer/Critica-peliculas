@@ -29,3 +29,7 @@ def porcentaje(datos):
     print("el 95% de los datos estan entre:"+ mediapond(datos)-2*sqrt(varianza(datos))+ "y"+ mediapond(datos)+2*sqrt(varianza(datos)))
     print("el 99.7% de los datos estan entre:"+ mediapond(datos)-3*sqrt(varianza(datos))+ "y"+ mediapond(datos)+3*sqrt(varianza(datos)))
 
+
+def plot(datos):
+    plt.figure(figsize=((15,15)))
+    sns.lineplot(data=datos, x = "Opinion xi", y="Cantidad de volantes (Ni)", color = "Blue")
